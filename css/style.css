@@ -14,7 +14,44 @@ html {
 /* 
     GENERAL
 */
-.container {
-    max-width: 1000px;
-    margin: 0 auto;
+main {
+    height: 100vh;
+    background-color: aqua;
+    position: relative;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    background-color: lightcoral;
+    position: absolute;
+    animation: move-element 4s infinite 2s linear alternate;
+}
+	
+@keyframes move-element {
+    0% {
+        background-color: red; 
+        left: 0; 
+        top: 0;
+    }  
+    60% {
+        background-color: yellow; 
+        left: calc(100% - 200px); 
+        top: 0;
+    }  
+    70% {
+        background-color: blue; 
+        left: calc(100% - 200px);
+        top: calc(100% - 200px); 
+    }   
+    80% {
+        background-color: green; 
+        left: 0; 
+        top: calc(100% - 200px); 
+    } 
+    100% {
+        background-color: red; 
+        left: 0; 
+        top: 0;
+    }   
 }
